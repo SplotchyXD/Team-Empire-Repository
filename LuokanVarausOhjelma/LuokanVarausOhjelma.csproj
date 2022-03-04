@@ -6,4 +6,14 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Images\Kerross2.jpg" />
+    <None Remove="Images\LuokkaKarttaK2v2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Kerross2.jpg" />
+    <Resource Include="Images\LuokkaKarttaK2v2.png" />
+  </ItemGroup>
+
 </Project>

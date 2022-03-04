@@ -6,7 +6,56 @@
         xmlns:local="clr-namespace:LuokanVarausOhjelma"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid RenderTransformOrigin="0.499,0.502" Margin="0,-2,0,2">
+        <Image Margin="59,31,33,10">
+            <Image.Source>
+                <BitmapImage DecodePixelWidth="7500" UriSource="/Images/Kerross2.jpg"/>
+            </Image.Source>
+        </Image>
+
+        <Image HorizontalAlignment="Left" Height="452" Margin="227,-19,0,0" VerticalAlignment="Top" Width="669" Source="/LuokkaKarttaK2.png" RenderTransformOrigin="0.5,0.5">
+
+            <Image.LayoutTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.LayoutTransform>
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform X="0" Y="-5"/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Canvas HorizontalAlignment="Left" Height="692" VerticalAlignment="Center" Width="396" RenderTransformOrigin="0.5,0.5" Margin="216,0,0,0" Visibility="Hidden">
+            <Canvas.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Canvas.RenderTransform>
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Images/LuokkaKarttaK2v2.png"/>
+            </Canvas.Background>
+
+        </Canvas>
+        <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="52" Margin="343,130,0,0" VerticalAlignment="Top" Width="33" RenderTransformOrigin="0.513,0.601">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-88.557"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+        </Border>
 
     </Grid>
 </Window>
