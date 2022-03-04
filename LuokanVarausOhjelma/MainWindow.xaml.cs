@@ -23,6 +23,13 @@ namespace LuokanVarausOhjelma
         public MainWindow()
         {
             InitializeComponent();
+
+
+        }
+
+        private void Fakta_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("XD TOIMII LOL");
         }
     }
 }
