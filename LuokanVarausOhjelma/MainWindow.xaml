@@ -5,16 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LuokanVarausOhjelma"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="MainWindow" Height="1075.5" Width="1920"
+        WindowStyle="None"
         WindowState="Maximized">
     <Grid RenderTransformOrigin="0.499,0.502" Margin="0,-2,0,2">
-        <Image Margin="59,31,33,10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="730*"/>
+            <ColumnDefinition Width="223*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="71*"/>
+            <RowDefinition Height="146*"/>
+        </Grid.RowDefinitions>
+        <Image Margin="59,31,33,10" Grid.RowSpan="3" Grid.ColumnSpan="2">
             <Image.Source>
                 <BitmapImage DecodePixelWidth="7500" UriSource="/Images/Kerross2.jpg"/>
             </Image.Source>
         </Image>
 
-        <Image HorizontalAlignment="Left" Height="452" Margin="227,-19,0,0" VerticalAlignment="Top" Width="669" Source="/LuokkaKarttaK2.png" RenderTransformOrigin="0.5,0.5">
+        <Image HorizontalAlignment="Left" Height="452" Margin="33,22,0,0" VerticalAlignment="Top" Width="669" Source="/LuokkaKarttaK2.png" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="2">
 
             <Image.LayoutTransform>
                 <TransformGroup>
@@ -33,7 +43,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Canvas HorizontalAlignment="Left" Height="692" VerticalAlignment="Center" Width="396" RenderTransformOrigin="0.5,0.5" Margin="216,0,0,0" Visibility="Hidden">
+        <Canvas HorizontalAlignment="Left" Height="692" VerticalAlignment="Top" Width="396" RenderTransformOrigin="0.5,0.5" Margin="216,-129,0,0" Visibility="Hidden" Grid.Row="1" Grid.RowSpan="2">
             <Canvas.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -47,26 +57,66 @@
             </Canvas.Background>
 
         </Canvas>
-        <Button x:Name="Fakta" Content="" HorizontalAlignment="Left" Margin="181,272,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="36" Width="45" Visibility="Visible" Click="Fakta_Click" Opacity="0.01">
+        <Button x:Name="Fakta" Content="Fakta" HorizontalAlignment="Right" Margin="0,0,949,520" VerticalAlignment="Bottom" RenderTransformOrigin="1.734,-0.407" Height="103" Width="119" Visibility="Visible" Click="Fakta_Click" Grid.Row="2" FontSize="24">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleX="1.036"/>
                     <SkewTransform AngleX="12.671" AngleY="8.869"/>
-                    <RotateTransform Angle="1489.181"/>
-                    <TranslateTransform X="-1.563" Y="11.115"/>
+                    <RotateTransform Angle="1487.449"/>
+                    <TranslateTransform X="-52.052" Y="383.178"/>
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="Into" Content="Button" HorizontalAlignment="Left" Margin="232,296,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="40" Width="57" Visibility="Visible">
+        <Button x:Name="Into" Content="Into" HorizontalAlignment="Left" Margin="491,373,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.416,0.692" Height="103" Width="153" Visibility="Visible" Grid.Row="2" FontSize="24">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
                     <RotateTransform Angle="-0.805"/>
+                    <TranslateTransform X="0.741" Y="0.449"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="Bitti" Content="Bitti" HorizontalAlignment="Left" Margin="643,115,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Height="107" Width="121" Opacity="0.975" FontSize="24"/>
+        <Button x:Name="Kaneli" Content="Kaneli" HorizontalAlignment="Left" Margin="769,99,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Height="107" Width="176" FontSize="24"/>
+        <Button x:Name="Visio" Content="Visio" HorizontalAlignment="Left" Margin="571,215,0,0" Grid.RowSpan="3" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="148" Width="110" FontSize="24">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="28.474"/>
                     <TranslateTransform/>
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
+        <Button x:Name="Virna" Content="Virna" HorizontalAlignment="Left" Margin="495,340,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2" Height="152" Width="80" FontSize="24">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="29.965"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="StudyO" Content="StudyO" HorizontalAlignment="Left" Margin="606,69,0,0" Grid.Row="2" VerticalAlignment="Top" Height="68" Width="98" FontSize="24"/>
+        <Button x:Name="Tuuma" Content="Tuuma" HorizontalAlignment="Left" Margin="776,297,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Height="71" Width="125" FontSize="24"/>
+        <Button x:Name="Amadeus" Content="Amadeus" HorizontalAlignment="Left" Margin="776,21,0,0" Grid.Row="2" VerticalAlignment="Top" Height="97" Width="125" FontSize="24"/>
+        <Button x:Name="Oiva" Content="Oiva" HorizontalAlignment="Left" Margin="441,225,0,0" Grid.Row="2" VerticalAlignment="Top" Height="123" Width="181" FontSize="24"/>
+        <Button x:Name="Toimi" Content="Toimi" HorizontalAlignment="Left" Margin="776,123,0,0" Grid.Row="2" VerticalAlignment="Top" Height="83" Width="125" FontSize="24"/>
+        <Button x:Name="Taito" Content="Taito" HorizontalAlignment="Left" Margin="799,206,0,0" Grid.Row="2" VerticalAlignment="Top" Height="132" Width="102" FontSize="24"/>
+        <Button x:Name="Media" Content="Media" HorizontalAlignment="Left" Margin="704,372,0,0" Grid.Row="2" VerticalAlignment="Top" Height="107" Width="197" FontSize="24"/>
+        <Button x:Name="Voitto" Content="Voitto" HorizontalAlignment="Left" Margin="956,257,0,0" Grid.Row="2" VerticalAlignment="Top" Height="160" Width="73" FontSize="24"/>
+        <Button x:Name="Digiluola" Content="Digiluola" HorizontalAlignment="Left" Margin="905,252,0,0" Grid.Row="2" VerticalAlignment="Top" Height="96" Width="51"/>
+        <Button x:Name="Arvo" Content="Arvo" HorizontalAlignment="Left" Margin="1034,257,0,0" Grid.Row="2" VerticalAlignment="Top" Height="168" Width="75" FontSize="24"/>
+        <Button x:Name="Tieto" Content="Tieto" HorizontalAlignment="Left" Margin="906,452,0,0" Grid.Row="2" VerticalAlignment="Top" Height="75" Width="151" FontSize="24"/>
+        <Button x:Name="Tohtori" Content="Tohtori" HorizontalAlignment="Left" Margin="1057,452,0,0" Grid.Row="2" VerticalAlignment="Top" Height="75" Width="129" FontSize="24"/>
+        <Button x:Name="Fiktio" Content="Fiktio" HorizontalAlignment="Left" Margin="1114,257,0,0" Grid.Row="2" VerticalAlignment="Top" Height="113" Width="146" FontSize="24"/>
+        <Button x:Name="Missio" Content="Missio" HorizontalAlignment="Left" Margin="1260,257,0,0" Grid.Row="2" VerticalAlignment="Top" Height="125" Width="73" FontSize="24"/>
+        <Button x:Name="Idea" Content="Idea" HorizontalAlignment="Left" Margin="1333,257,0,0" Grid.Row="2" VerticalAlignment="Top" Height="119" Width="76" FontSize="24"/>
+        <Button x:Name="Imago" Content="Imago" HorizontalAlignment="Left" Margin="1414,257,0,0" Grid.Row="2" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="119" Width="96" FontSize="24"/>
+        <Button x:Name="Voltti" Content="Voltti" HorizontalAlignment="Left" Margin="44,257,0,0" Grid.Row="2" VerticalAlignment="Top" Grid.Column="1" Height="119" Width="101" FontSize="24"/>
+        <Button x:Name="Tili" Content="Tili" HorizontalAlignment="Left" Margin="1341,405,0,0" Grid.Row="2" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="122" Width="169" FontSize="24"/>
 
     </Grid>
 </Window>
