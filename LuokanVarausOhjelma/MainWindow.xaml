@@ -78,7 +78,7 @@
             </Button.RenderTransform>
         </Button>
         <Button x:Name="Bitti" Content="Bitti" HorizontalAlignment="Left" Margin="643,115,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Height="107" Width="121" Opacity="0.975" FontSize="24"/>
-        <Button x:Name="Kaneli" Content="Kaneli" HorizontalAlignment="Left" Margin="769,99,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Height="107" Width="176" FontSize="24"/>
+        <Button x:Name="Kaneli" Content="Kaneli" HorizontalAlignment="Left" Margin="769,99,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Height="107" Width="176" FontSize="24" Click="Kaneli_Click"/>
         <Button x:Name="Visio" Content="Visio" HorizontalAlignment="Left" Margin="571,215,0,0" Grid.RowSpan="3" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="148" Width="110" FontSize="24">
             <Button.RenderTransform>
                 <TransformGroup>

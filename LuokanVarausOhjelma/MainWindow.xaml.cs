@@ -21,16 +21,34 @@ namespace LuokanVarausOhjelma
     /// </summary>
     public partial class MainWindow : Window
     {
+        private SqlConnection con;
+        private SqlCommand cmd;
+        public int count = 0;
         public MainWindow()
         {
             InitializeComponent();
-
-
         }
 
         private void Fakta_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("XD TOIMII LOL");
+        }
+
+        private void Kaneli_Click(object sender, RoutedEventArgs e)
+        {
+            con = new SqlConnection(@"Data Source = teamempiresrv.database.windows.net; Initial Catalog = LuokkaVaraus; Persist Security Info = True; User ID = Empire; Password = Nice1234");
+            con.Open();
+            if (count == 0)
+            {
+                cmd = new SqlCommand("UPDATE Luokat SET Is_Varattu=1 WHERE LuokkaId=6", con);
+                count++;
+            }else
+            {
+                cmd = new SqlCommand("UPDATE Luokat SET Is_Varattu=0 WHERE LuokkaId=6", con);
+                count--;
+            }
+            cmd.ExecuteNonQuery();
+            con.Close();
         }
     }
 }
