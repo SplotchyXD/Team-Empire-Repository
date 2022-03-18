@@ -57,66 +57,31 @@
             </Canvas.Background>
 
         </Canvas>
-        <Button x:Name="Fakta" Content="Fakta" HorizontalAlignment="Right" Margin="0,0,949,520" VerticalAlignment="Bottom" RenderTransformOrigin="1.734,-0.407" Height="103" Width="119" Visibility="Visible" Click="Fakta_Click" Grid.Row="2" FontSize="24">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="1.036"/>
-                    <SkewTransform AngleX="12.671" AngleY="8.869"/>
-                    <RotateTransform Angle="1487.449"/>
-                    <TranslateTransform X="-52.052" Y="383.178"/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-        <Button x:Name="Into" Content="Into" HorizontalAlignment="Left" Margin="491,373,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.416,0.692" Height="103" Width="153" Visibility="Visible" Grid.Row="2" FontSize="24">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.805"/>
-                    <TranslateTransform X="0.741" Y="0.449"/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-        <Button x:Name="Bitti" Content="Bitti" HorizontalAlignment="Left" Margin="643,115,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Height="107" Width="121" Opacity="0.975" FontSize="24"/>
-        <Button x:Name="Kaneli" Content="Kaneli" HorizontalAlignment="Left" Margin="769,99,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Height="107" Width="176" FontSize="24" Click="Kaneli_Click"/>
-        <Button x:Name="Visio" Content="Visio" HorizontalAlignment="Left" Margin="571,215,0,0" Grid.RowSpan="3" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="148" Width="110" FontSize="24">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="28.474"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-        <Button x:Name="Virna" Content="Virna" HorizontalAlignment="Left" Margin="495,340,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2" Height="152" Width="80" FontSize="24">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="29.965"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-        <Button x:Name="StudyO" Content="StudyO" HorizontalAlignment="Left" Margin="606,69,0,0" Grid.Row="2" VerticalAlignment="Top" Height="68" Width="98" FontSize="24"/>
-        <Button x:Name="Tuuma" Content="Tuuma" HorizontalAlignment="Left" Margin="776,297,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Height="71" Width="125" FontSize="24"/>
-        <Button x:Name="Amadeus" Content="Amadeus" HorizontalAlignment="Left" Margin="776,21,0,0" Grid.Row="2" VerticalAlignment="Top" Height="97" Width="125" FontSize="24"/>
-        <Button x:Name="Oiva" Content="Oiva" HorizontalAlignment="Left" Margin="441,225,0,0" Grid.Row="2" VerticalAlignment="Top" Height="123" Width="181" FontSize="24"/>
-        <Button x:Name="Toimi" Content="Toimi" HorizontalAlignment="Left" Margin="776,123,0,0" Grid.Row="2" VerticalAlignment="Top" Height="83" Width="125" FontSize="24"/>
-        <Button x:Name="Taito" Content="Taito" HorizontalAlignment="Left" Margin="799,206,0,0" Grid.Row="2" VerticalAlignment="Top" Height="132" Width="102" FontSize="24"/>
-        <Button x:Name="Media" Content="Media" HorizontalAlignment="Left" Margin="704,372,0,0" Grid.Row="2" VerticalAlignment="Top" Height="107" Width="197" FontSize="24"/>
-        <Button x:Name="Voitto" Content="Voitto" HorizontalAlignment="Left" Margin="956,257,0,0" Grid.Row="2" VerticalAlignment="Top" Height="160" Width="73" FontSize="24"/>
-        <Button x:Name="Digiluola" Content="Digiluola" HorizontalAlignment="Left" Margin="905,252,0,0" Grid.Row="2" VerticalAlignment="Top" Height="96" Width="51"/>
-        <Button x:Name="Arvo" Content="Arvo" HorizontalAlignment="Left" Margin="1034,257,0,0" Grid.Row="2" VerticalAlignment="Top" Height="168" Width="75" FontSize="24"/>
-        <Button x:Name="Tieto" Content="Tieto" HorizontalAlignment="Left" Margin="906,452,0,0" Grid.Row="2" VerticalAlignment="Top" Height="75" Width="151" FontSize="24"/>
-        <Button x:Name="Tohtori" Content="Tohtori" HorizontalAlignment="Left" Margin="1057,452,0,0" Grid.Row="2" VerticalAlignment="Top" Height="75" Width="129" FontSize="24"/>
-        <Button x:Name="Fiktio" Content="Fiktio" HorizontalAlignment="Left" Margin="1114,257,0,0" Grid.Row="2" VerticalAlignment="Top" Height="113" Width="146" FontSize="24"/>
-        <Button x:Name="Missio" Content="Missio" HorizontalAlignment="Left" Margin="1260,257,0,0" Grid.Row="2" VerticalAlignment="Top" Height="125" Width="73" FontSize="24"/>
-        <Button x:Name="Idea" Content="Idea" HorizontalAlignment="Left" Margin="1333,257,0,0" Grid.Row="2" VerticalAlignment="Top" Height="119" Width="76" FontSize="24"/>
-        <Button x:Name="Imago" Content="Imago" HorizontalAlignment="Left" Margin="1414,257,0,0" Grid.Row="2" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="119" Width="96" FontSize="24"/>
-        <Button x:Name="Voltti" Content="Voltti" HorizontalAlignment="Left" Margin="44,257,0,0" Grid.Row="2" VerticalAlignment="Top" Grid.Column="1" Height="119" Width="101" FontSize="24"/>
-        <Button x:Name="Tili" Content="Tili" HorizontalAlignment="Left" Margin="1341,405,0,0" Grid.Row="2" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="122" Width="169" FontSize="24"/>
 
+        <Rectangle x:Name="Oiva" HorizontalAlignment="Left" Height="42" Margin="444,273,0,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="42" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55"/>
+        <Rectangle x:Name="Fakta" HorizontalAlignment="Left" Height="42" Margin="394,358,0,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="42" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55"/>
+        <Rectangle x:Name="Into" HorizontalAlignment="Left" Height="40" Margin="503,419,0,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="40" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55"/>
+        <Rectangle x:Name="Media" HorizontalAlignment="Left" Height="42" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="42" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55" Margin="724,408,0,0" Grid.RowSpan="2"/>
+        <Rectangle x:Name="Tieto" HorizontalAlignment="Left" Height="42" Margin="912,476,0,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="42" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55"/>
+        <Rectangle x:Name="Tohtori" HorizontalAlignment="Left" Height="42" Margin="1059,474,0,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="32" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55"/>
+        <Rectangle x:Name="Tili" HorizontalAlignment="Left" Height="42" Margin="1350,468,0,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="42" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55"/>
+        <Rectangle x:Name="Imago" HorizontalAlignment="Left" Height="42" Margin="1459,330,0,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="42" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55" Grid.ColumnSpan="2"/>
+        <Rectangle x:Name="Voltti" HorizontalAlignment="Left" Height="42" Margin="95,324,0,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="42" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55" Grid.Column="1"/>
+        <Rectangle x:Name="Idea" HorizontalAlignment="Left" Height="42" Margin="1350,328,0,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="42" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55"/>
+        <Rectangle x:Name="Missio" HorizontalAlignment="Left" Height="42" Margin="1276,328,0,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="42" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55"/>
+        <Rectangle x:Name="Fiktio" HorizontalAlignment="Left" Height="42" Margin="1196,328,0,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="42" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55"/>
+        <Rectangle x:Name="Arvo" HorizontalAlignment="Left" Height="42" Margin="1049,328,0,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="42" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55"/>
+        <Rectangle x:Name="Voitto" HorizontalAlignment="Left" Height="42" Margin="968,334,0,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="42" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55"/>
+        <Rectangle x:Name="Taito" HorizontalAlignment="Left" Height="42" Margin="837,273,0,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="42" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55"/>
+        <Rectangle x:Name="Amadeus" HorizontalAlignment="Left" Height="28" Grid.Row="2" Stroke="Black" VerticalAlignment="Bottom" Width="29" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55" Margin="865,0,0,610"/>
+        <Rectangle x:Name="Tuu_a" HorizontalAlignment="Left" Height="29" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="28" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55" Margin="865,338,0,0" Grid.RowSpan="2"/>
+        <Rectangle x:Name="Kaneli" HorizontalAlignment="Left" Height="29" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="28" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55" Margin="908,113,0,0"/>
+        <Rectangle x:Name="Bitti" HorizontalAlignment="Left" Height="34" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="34" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55" Margin="674,128,0,0"/>
+        <Rectangle x:Name="Visio" HorizontalAlignment="Left" Height="34" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="34" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55" Margin="614,242,0,0"/>
+        <Rectangle x:Name="Virna" HorizontalAlignment="Left" Height="34" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="34" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55" Margin="536,4,0,0"/>
+        <Rectangle x:Name="SudyO" HorizontalAlignment="Left" Height="28" Margin="674,107,0,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="28" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55"/>
+        <Rectangle x:Name="Digiluola" HorizontalAlignment="Left" Height="21" Margin="914,261,0,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="38" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55"/>
+        <Rectangle x:Name="Toimi" HorizontalAlignment="Left" Height="29" Grid.Row="2" Stroke="Black" VerticalAlignment="Bottom" Width="29" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55" Margin="865,0,0,528"/>
+        <Button x:Name="Kaneli1" Content="Kaneli" HorizontalAlignment="Left" Margin="1371,0,0,0" Grid.Row="2" VerticalAlignment="Top" Click="Kaneli_Click" Grid.ColumnSpan="2" Height="106" Width="167" AutomationProperties.Name="dsa"/>
     </Grid>
 </Window>
