@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data.SqlClient;
+using System.Drawing;
 
 namespace LuokanVarausOhjelma
 {
@@ -24,6 +25,10 @@ namespace LuokanVarausOhjelma
         private SqlConnection con;
         private SqlCommand cmd;
         public int count = 0;
+
+        SolidColorBrush VarausBrush = new SolidColorBrush(Colors.Red);
+        SolidColorBrush VapaaBrush = new SolidColorBrush(Colors.Green);
+
         public MainWindow()
         {
             InitializeComponent();
@@ -36,6 +41,7 @@ namespace LuokanVarausOhjelma
 
         private void Kaneli_Click(object sender, RoutedEventArgs e)
         {
+
             con = new SqlConnection(@"Data Source = teamempiresrv.database.windows.net; Initial Catalog = LuokkaVaraus; Persist Security Info = True; User ID = Empire; Password = Nice1234");
             con.Open();
             if (count == 0)
@@ -43,11 +49,13 @@ namespace LuokanVarausOhjelma
                 //cmd = new SqlCommand("UPDATE Luokat SET Is_Varattu=1 WHERE LuokkaId=6", con);
                 cmd = new SqlCommand ("UPDATE Luokat Set Is_Varattu=1 WHERE LuokkaNImi= 'Kaneli'", con);
                 count++;
+                Kaneli.Fill = VarausBrush;
             }else
             {
                 //cmd = new SqlCommand("UPDATE Luokat SET Is_Varattu=0 WHERE LuokkaId=6", con);
                 cmd = new SqlCommand("UPDATE Luokat Set Is_Varattu=0 WHERE LuokkaNImi= 'Kaneli'", con);
                 count--;
+                Kaneli.Fill = VapaaBrush;
             }
             cmd.ExecuteNonQuery();
             con.Close();
