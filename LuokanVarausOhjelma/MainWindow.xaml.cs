@@ -40,11 +40,13 @@ namespace LuokanVarausOhjelma
             con.Open();
             if (count == 0)
             {
-                cmd = new SqlCommand("UPDATE Luokat SET Is_Varattu=1 WHERE LuokkaId=6", con);
+                //cmd = new SqlCommand("UPDATE Luokat SET Is_Varattu=1 WHERE LuokkaId=6", con);
+                cmd = new SqlCommand ("UPDATE Luokat Set Is_Varattu=1 WHERE LuokkaNImi= 'Kaneli'", con);
                 count++;
             }else
             {
-                cmd = new SqlCommand("UPDATE Luokat SET Is_Varattu=0 WHERE LuokkaId=6", con);
+                //cmd = new SqlCommand("UPDATE Luokat SET Is_Varattu=0 WHERE LuokkaId=6", con);
+                cmd = new SqlCommand("UPDATE Luokat Set Is_Varattu=0 WHERE LuokkaNImi= 'Kaneli'", con);
                 count--;
             }
             cmd.ExecuteNonQuery();
