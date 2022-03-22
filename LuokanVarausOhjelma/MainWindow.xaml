@@ -6,9 +6,10 @@
         xmlns:local="clr-namespace:LuokanVarausOhjelma"
         mc:Ignorable="d"
         Title="MainWindow" Height="1075.5" Width="1920"
+        KeyDown="Nappi_painettu"
         WindowStyle="None"
-        WindowState="Maximized">
-    <Grid RenderTransformOrigin="0.499,0.502" Margin="0,-2,0,2">
+        WindowState="Maximized" >
+    <Grid RenderTransformOrigin="0.499,0.502" Margin="0,-2,0,2" IsEnabled="False">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="730*"/>
             <ColumnDefinition Width="223*"/>
@@ -74,14 +75,14 @@
         <Rectangle x:Name="Voitto" Fill="Green" HorizontalAlignment="Left" Height="42" Margin="968,334,0,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="42" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55"/>
         <Rectangle x:Name="Taito" Fill="Green" HorizontalAlignment="Left" Height="42" Margin="837,273,0,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="42" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55"/>
         <Rectangle x:Name="Amadeus" Fill="Green" HorizontalAlignment="Left" Height="28" Grid.Row="2" Stroke="Black" VerticalAlignment="Bottom" Width="29" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55" Margin="865,0,0,610"/>
-        <Rectangle x:Name="Tuu_a" Fill="Green" HorizontalAlignment="Left" Height="29" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="28" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55" Margin="865,338,0,0" Grid.RowSpan="2"/>
+        <Rectangle x:Name="Tuuma" Fill="Green" HorizontalAlignment="Left" Height="29" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="28" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55" Margin="865,338,0,0" Grid.RowSpan="2"/>
         <Rectangle x:Name="Kaneli" Fill="Green" HorizontalAlignment="Left" Height="29" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="28" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55" Margin="908,113,0,0"/>
         <Rectangle x:Name="Bitti" Fill="Green" HorizontalAlignment="Left" Height="34" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="34" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55" Margin="674,128,0,0"/>
         <Rectangle x:Name="Visio" Fill="Green" HorizontalAlignment="Left" Height="34" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="34" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55" Margin="614,242,0,0"/>
         <Rectangle x:Name="Virna" Fill="Green" HorizontalAlignment="Left" Height="34" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="34" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55" Margin="536,4,0,0"/>
-        <Rectangle x:Name="SudyO" Fill="Green"  HorizontalAlignment="Left" Height="28" Margin="674,107,0,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="28" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55"/>
-        <Rectangle x:Name="Digiluola" Fill="Green" HorizontalAlignment="Left" Height="21" Margin="914,261,0,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="38" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55"/>
+        <Rectangle x:Name="StudyO" Fill="Green"  HorizontalAlignment="Left" Height="28" Margin="674,107,0,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="28" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55"/>
+        <Rectangle x:Name="DigiLuola" Fill="Green" HorizontalAlignment="Left" Height="21" Margin="914,261,0,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="38" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55"/>
         <Rectangle x:Name="Toimi" Fill="Green" HorizontalAlignment="Left" Height="29" Grid.Row="2" Stroke="Black" VerticalAlignment="Bottom" Width="29" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55" Margin="865,0,0,528"/>
-        <Button x:Name="Kaneli1" Content="Kaneli" HorizontalAlignment="Left" Margin="1371,0,0,0" Grid.Row="2" VerticalAlignment="Top" Click="Kaneli_Click" Grid.ColumnSpan="2" Height="106" Width="167" AutomationProperties.Name="dsa"/>
+        <Button x:Name="Kaneli1" Content="Kaneli" HorizontalAlignment="Left" Margin="1371,0,0,0" Grid.Row="2" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="106" Width="167" AutomationProperties.Name="dsa"/>
     </Grid>
 </Window>
