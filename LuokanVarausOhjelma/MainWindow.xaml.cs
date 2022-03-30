@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Data;
 
 namespace LuokanVarausOhjelma
 {
@@ -56,7 +57,56 @@ namespace LuokanVarausOhjelma
         {
             InitializeComponent();
             Get_Data_SQL();
+
+            System.Timers.Timer timer = new System.Timers.Timer();
+
+
+
+
+            timer.Interval = 20000;
+            timer.Elapsed += timer_Elapsed;
+            timer.Start();
+
+
+            void timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+            {
+
+
+
+
+
+                //fill the DataTable or source collection from the database here...
+                Dispatcher.BeginInvoke(new Action(() =>
+                {
+
+                    
+                    /* SqlConnection connection = new SqlConnection(@"Data Source = teamempiresrv.database.windows.net; Initial Catalog = LuokkaVaraus; Persist Security Info = True; User ID = Empire; Password = Nice1234");
+                     connection.Open();
+
+                     string Get_Data = "SELECT * FROM Luokat";
+
+                     SqlCommand cmd = connection.CreateCommand();
+                     cmd.CommandText = Get_Data;
+
+                     SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                     DataTable dt = new DataTable("Luokat");
+                     sda.Fill(dt);*/
+
+                   // Grid_luokat.DataContext = dt.DefaultView
+                    
+                  
+                    Get_Data_SQL();
+                    MessageBox.Show("paska");
+
+
+                }));
+            }
+
+
         }
+
+            
+        
 
         private void Fakta_Click(object sender, RoutedEventArgs e)
         {
