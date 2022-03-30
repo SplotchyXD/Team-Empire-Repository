@@ -22,8 +22,8 @@ namespace LuokanVarausOhjelma
     /// </summary>
     public partial class MainWindow : Window
     {
-        private SqlConnection con;
-        private SqlCommand cmd;
+        public SqlConnection con;
+        public SqlCommand cmd;
         public int KaneliCount = 0;
         public int BittiCount = 0;
         public int StudyOCount = 0;
@@ -55,6 +55,7 @@ namespace LuokanVarausOhjelma
         public MainWindow()
         {
             InitializeComponent();
+            Get_Data_SQL();
         }
 
         private void Fakta_Click(object sender, RoutedEventArgs e)
@@ -135,13 +136,13 @@ namespace LuokanVarausOhjelma
             }
             else if (e.Key == Key.W && VirnaCount == 0)
             {
-                cmd = new SqlCommand("UPDATE Luokat Set Is_Varattu=1 WHERE LuokkaNimi= 'Vima'", con);
+                cmd = new SqlCommand("UPDATE Luokat Set Is_Varattu=1 WHERE LuokkaNimi= 'Virna'", con);
                 VirnaCount++;
                 Virna.Fill = VarausBrush;
             }
             else if (e.Key == Key.W && VirnaCount == 1)
             {
-                cmd = new SqlCommand("UPDATE Luokat Set Is_Varattu=0 WHERE LuokkaNimi= 'Vima'", con);
+                cmd = new SqlCommand("UPDATE Luokat Set Is_Varattu=0 WHERE LuokkaNimi= 'Virna'", con);
                 VirnaCount--;
                 Virna.Fill = VapaaBrush;
             }
@@ -390,6 +391,417 @@ namespace LuokanVarausOhjelma
             con.Close();
         }
 
+        public void Get_Data_SQL()
+        {
+            SqlDataReader rdr = null;
+            con = new SqlConnection(@"Data Source = teamempiresrv.database.windows.net; Initial Catalog = LuokkaVaraus; Persist Security Info = True; User ID = Empire; Password = Nice1234");
 
+            con.Open();
+            cmd = new SqlCommand("Select Is_Varattu from Luokat Where LuokkaNimi ='StudyO'", con);
+            cmd.CommandType = System.Data.CommandType.Text;
+            rdr = cmd.ExecuteReader();
+            rdr.Read();
+            if ((bool)rdr["Is_Varattu"] == true)
+            {
+                StudyOCount = 1;
+                StudyO.Fill = VarausBrush;
+            }
+            else
+            {
+                StudyOCount = 0;
+                StudyO.Fill = VapaaBrush;
+            }
+            con.Close();
+
+            con.Open();
+            cmd = new SqlCommand("Select Is_Varattu from Luokat Where LuokkaNimi ='Virna'", con);
+            cmd.CommandType = System.Data.CommandType.Text;
+            rdr = cmd.ExecuteReader();
+            rdr.Read();
+            if ((bool)rdr["Is_Varattu"] == true)
+            {
+                VirnaCount = 1;
+                Virna.Fill = VarausBrush;
+            }
+            else
+            {
+                VirnaCount = 0;
+                Virna.Fill = VapaaBrush;
+            }
+            con.Close();
+
+            con.Open();
+            cmd = new SqlCommand("Select Is_Varattu from Luokat Where LuokkaNimi ='Visio'", con);
+            cmd.CommandType = System.Data.CommandType.Text;
+            rdr = cmd.ExecuteReader();
+            rdr.Read();
+            if((bool)rdr["Is_Varattu"] == true)
+            {
+                VisioCount = 1;
+                Visio.Fill = VarausBrush;
+            }else
+            {
+                VisioCount = 0;
+                Visio.Fill = VapaaBrush;
+            }
+            con.Close();
+
+            con.Open();
+            cmd = new SqlCommand("Select Is_Varattu from Luokat Where LuokkaNimi ='Bitti'", con);
+            cmd.CommandType = System.Data.CommandType.Text;
+            rdr = cmd.ExecuteReader();
+            rdr.Read();
+            if ((bool)rdr["Is_Varattu"] == true)
+            {
+                BittiCount = 1;
+                Bitti.Fill = VarausBrush;
+            }
+            else
+            {
+                BittiCount = 0;
+                Bitti.Fill = VapaaBrush;
+            }
+            con.Close();
+
+            con.Open();
+            cmd = new SqlCommand("Select Is_Varattu from Luokat Where LuokkaNimi ='Kaneli'", con);
+            cmd.CommandType = System.Data.CommandType.Text;
+            rdr = cmd.ExecuteReader();
+            rdr.Read();
+            if ((bool)rdr["Is_Varattu"] == true)
+            {
+                KaneliCount = 1;
+                Kaneli.Fill = VarausBrush;
+            }
+            else
+            {
+                KaneliCount = 0;
+                Kaneli.Fill = VapaaBrush;
+            }
+            con.Close();
+
+            con.Open();
+            cmd = new SqlCommand("Select Is_Varattu from Luokat Where LuokkaNimi ='Tuuma'", con);
+            cmd.CommandType = System.Data.CommandType.Text;
+            rdr = cmd.ExecuteReader();
+            rdr.Read();
+            if ((bool)rdr["Is_Varattu"] == true)
+            {
+                TuumaCount = 1;
+                Tuuma.Fill = VarausBrush;
+            }
+            else
+            {
+                TuumaCount = 0;
+                Tuuma.Fill = VapaaBrush;
+            }
+            con.Close();
+
+            con.Open();
+            cmd = new SqlCommand("Select Is_Varattu from Luokat Where LuokkaNimi ='Amadeus'", con);
+            cmd.CommandType = System.Data.CommandType.Text;
+            rdr = cmd.ExecuteReader();
+            rdr.Read();
+            if ((bool)rdr["Is_Varattu"] == true)
+            {
+                AmadeusCount = 1;
+                Amadeus.Fill = VarausBrush;
+            }
+            else
+            {
+                AmadeusCount = 0;
+                Amadeus.Fill = VapaaBrush;
+            }
+            con.Close();
+
+            con.Open();
+            cmd = new SqlCommand("Select Is_Varattu from Luokat Where LuokkaNimi ='Toimi'", con);
+            cmd.CommandType = System.Data.CommandType.Text;
+            rdr = cmd.ExecuteReader();
+            rdr.Read();
+            if ((bool)rdr["Is_Varattu"] == true)
+            {
+                ToimiCount = 1;
+                Toimi.Fill = VarausBrush;
+            }
+            else
+            {
+                ToimiCount = 0;
+                Toimi.Fill = VapaaBrush;
+            }
+            con.Close();
+
+            con.Open();
+            cmd = new SqlCommand("Select Is_Varattu from Luokat Where LuokkaNimi ='Taito'", con);
+            cmd.CommandType = System.Data.CommandType.Text;
+            rdr = cmd.ExecuteReader();
+            rdr.Read();
+            if ((bool)rdr["Is_Varattu"] == true)
+            {
+                TaitoCount = 1;
+                Taito.Fill = VarausBrush;
+            }
+            else
+            {
+                TaitoCount = 0;
+                Taito.Fill = VapaaBrush;
+            }
+            con.Close();
+
+            con.Open();
+            cmd = new SqlCommand("Select Is_Varattu from Luokat Where LuokkaNimi ='DigiLuola'", con);
+            cmd.CommandType = System.Data.CommandType.Text;
+            rdr = cmd.ExecuteReader();
+            rdr.Read();
+            if ((bool)rdr["Is_Varattu"] == true)
+            {
+                DigiLuolaCount = 1;
+                DigiLuola.Fill = VarausBrush;
+            }
+            else
+            {
+                DigiLuolaCount = 0;
+                DigiLuola.Fill = VapaaBrush;
+            }
+            con.Close();
+
+            con.Open();
+            cmd = new SqlCommand("Select Is_Varattu from Luokat Where LuokkaNimi ='Voitto'", con);
+            cmd.CommandType = System.Data.CommandType.Text;
+            rdr = cmd.ExecuteReader();
+            rdr.Read();
+            if ((bool)rdr["Is_Varattu"] == true)
+            {
+                VoittoCount = 1;
+                Voitto.Fill = VarausBrush;
+            }
+            else
+            {
+                VoittoCount = 0;
+                Voitto.Fill = VapaaBrush;
+            }
+            con.Close();
+
+            con.Open();
+            cmd = new SqlCommand("Select Is_Varattu from Luokat Where LuokkaNimi ='Arvo'", con);
+            cmd.CommandType = System.Data.CommandType.Text;
+            rdr = cmd.ExecuteReader();
+            rdr.Read();
+            if ((bool)rdr["Is_Varattu"] == true)
+            {
+                ArvoCount = 1;
+                Arvo.Fill = VarausBrush;
+            }
+            else
+            {
+                ArvoCount = 0;
+                Arvo.Fill = VapaaBrush;
+            }
+            con.Close();
+
+            con.Open();
+            cmd = new SqlCommand("Select Is_Varattu from Luokat Where LuokkaNimi ='Fiktio'", con);
+            cmd.CommandType = System.Data.CommandType.Text;
+            rdr = cmd.ExecuteReader();
+            rdr.Read();
+            if ((bool)rdr["Is_Varattu"] == true)
+            {
+                FiktioCount = 1;
+                Fiktio.Fill = VarausBrush;
+            }
+            else
+            {
+                FiktioCount = 0;
+                Fiktio.Fill = VapaaBrush;
+            }
+            con.Close();
+
+            con.Open();
+            cmd = new SqlCommand("Select Is_Varattu from Luokat Where LuokkaNimi ='Missio'", con);
+            cmd.CommandType = System.Data.CommandType.Text;
+            rdr = cmd.ExecuteReader();
+            rdr.Read();
+            if ((bool)rdr["Is_Varattu"] == true)
+            {
+                MissioCount = 1;
+                Missio.Fill = VarausBrush;
+            }
+            else
+            {
+                MissioCount = 0;
+                Missio.Fill = VapaaBrush;
+            }
+            con.Close();
+
+            con.Open();
+            cmd = new SqlCommand("Select Is_Varattu from Luokat Where LuokkaNimi ='Idea'", con);
+            cmd.CommandType = System.Data.CommandType.Text;
+            rdr = cmd.ExecuteReader();
+            rdr.Read();
+            if ((bool)rdr["Is_Varattu"] == true)
+            {
+                IdeaCount = 1;
+                Idea.Fill = VarausBrush;
+            }
+            else
+            {
+                IdeaCount = 0;
+                Idea.Fill = VapaaBrush;
+            }
+            con.Close();
+
+            con.Open();
+            cmd = new SqlCommand("Select Is_Varattu from Luokat Where LuokkaNimi ='Imago'", con);
+            cmd.CommandType = System.Data.CommandType.Text;
+            rdr = cmd.ExecuteReader();
+            rdr.Read();
+            if ((bool)rdr["Is_Varattu"] == true)
+            {
+                ImagoCount = 1;
+                Imago.Fill = VarausBrush;
+            }
+            else
+            {
+                ImagoCount = 0;
+                Imago.Fill = VapaaBrush;
+            }
+            con.Close();
+
+            con.Open();
+            cmd = new SqlCommand("Select Is_Varattu from Luokat Where LuokkaNimi ='Voltti'", con);
+            cmd.CommandType = System.Data.CommandType.Text;
+            rdr = cmd.ExecuteReader();
+            rdr.Read();
+            if ((bool)rdr["Is_Varattu"] == true)
+            {
+                VolttiCount = 1;
+                Voltti.Fill = VarausBrush;
+            }
+            else
+            {
+                VolttiCount = 0;
+                Voltti.Fill = VapaaBrush;
+            }
+            con.Close();
+
+            con.Open();
+            cmd = new SqlCommand("Select Is_Varattu from Luokat Where LuokkaNimi ='Tili'", con);
+            cmd.CommandType = System.Data.CommandType.Text;
+            rdr = cmd.ExecuteReader();
+            rdr.Read();
+            if ((bool)rdr["Is_Varattu"] == true)
+            {
+                TiliCount = 1;
+                Tili.Fill = VarausBrush;
+            }
+            else
+            {
+                TiliCount = 0;
+                Tili.Fill = VapaaBrush;
+            }
+            con.Close();
+
+            con.Open();
+            cmd = new SqlCommand("Select Is_Varattu from Luokat Where LuokkaNimi ='Tohtori'", con);
+            cmd.CommandType = System.Data.CommandType.Text;
+            rdr = cmd.ExecuteReader();
+            rdr.Read();
+            if ((bool)rdr["Is_Varattu"] == true)
+            {
+                TohtoriCount = 1;
+                Tohtori.Fill = VarausBrush;
+            }
+            else
+            {
+                TohtoriCount = 0;
+                Tohtori.Fill = VapaaBrush;
+            }
+            con.Close();
+
+            con.Open();
+            cmd = new SqlCommand("Select Is_Varattu from Luokat Where LuokkaNimi ='Tieto'", con);
+            cmd.CommandType = System.Data.CommandType.Text;
+            rdr = cmd.ExecuteReader();
+            rdr.Read();
+            if ((bool)rdr["Is_Varattu"] == true)
+            {
+                TietoCount = 1;
+                Tieto.Fill = VarausBrush;
+            }
+            else
+            {
+                TietoCount = 0;
+                Tieto.Fill = VapaaBrush;
+            }
+            con.Close();
+
+            con.Open();
+            cmd = new SqlCommand("Select Is_Varattu from Luokat Where LuokkaNimi ='Media'", con);
+            cmd.CommandType = System.Data.CommandType.Text;
+            rdr = cmd.ExecuteReader();
+            rdr.Read();
+            if ((bool)rdr["Is_Varattu"] == true)
+            {
+                MediaCount = 1;
+                Media.Fill = VarausBrush;
+            }
+            else
+            {
+                MediaCount = 0;
+                Media.Fill = VapaaBrush;
+            }
+            con.Close();
+
+            con.Open();
+            cmd = new SqlCommand("Select Is_Varattu from Luokat Where LuokkaNimi ='Into'", con);
+            cmd.CommandType = System.Data.CommandType.Text;
+            rdr = cmd.ExecuteReader();
+            rdr.Read();
+            if ((bool)rdr["Is_Varattu"] == true)
+            {
+                IntoCount = 1;
+                Into.Fill = VarausBrush;
+            }
+            else
+            {
+                IntoCount = 0;
+                Into.Fill = VapaaBrush;
+            }
+            con.Close();
+
+            con.Open();
+            cmd = new SqlCommand("Select Is_Varattu from Luokat Where LuokkaNimi ='Fakta'", con);
+            cmd.CommandType = System.Data.CommandType.Text;
+            rdr = cmd.ExecuteReader();
+            rdr.Read();
+            if ((bool)rdr["Is_Varattu"] == true)
+            {
+                FaktaCount = 1;
+                Fakta.Fill = VarausBrush;
+            }
+            else
+            {
+                FaktaCount = 0;
+                Fakta.Fill = VapaaBrush;
+            }
+            con.Close();
+
+            con.Open();
+            cmd = new SqlCommand("Select Is_Varattu from Luokat Where LuokkaNimi ='Oiva'", con);
+            cmd.CommandType = System.Data.CommandType.Text;
+            rdr = cmd.ExecuteReader();
+            rdr.Read();
+            if ((bool)rdr["Is_Varattu"] == true)
+            {
+                OivaCount = 1;
+                Oiva.Fill = VarausBrush;
+            }
+            else
+            {
+                OivaCount = 0;
+                Oiva.Fill = VapaaBrush;
+            }
+            con.Close();
+        }            
     }
 }
