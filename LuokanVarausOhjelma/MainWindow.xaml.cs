@@ -69,11 +69,6 @@ namespace LuokanVarausOhjelma
             }
         }
 
-        private void Fakta_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("XD TOIMII LOL");
-        }
-
         private void Nappi_painettu(object sender, KeyEventArgs e)
         {
             con = new SqlConnection(@"Data Source = teamempiresrv.database.windows.net; Initial Catalog = LuokkaVaraus; Persist Security Info = True; User ID = Empire; Password = Nice1234");
