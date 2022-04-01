@@ -83,6 +83,7 @@
         <Rectangle x:Name="StudyO" Fill="Green"  HorizontalAlignment="Left" Height="28" Margin="674,107,0,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="28" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55"/>
         <Rectangle x:Name="DigiLuola" Fill="Green" HorizontalAlignment="Left" Height="21" Margin="914,261,0,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="38" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55"/>
         <Rectangle x:Name="Toimi" Fill="Green" HorizontalAlignment="Left" Height="29" Grid.Row="2" Stroke="Black" VerticalAlignment="Bottom" Width="29" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55" Margin="865,0,0,528"/>
-        <Button x:Name="Kaneli1" Content="Kaneli" HorizontalAlignment="Left" Margin="1371,0,0,0" Grid.Row="2" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="106" Width="167" AutomationProperties.Name="dsa"/>
+        <Button x:Name="Kaneli1" Content="Kaneli" HorizontalAlignment="Left" Margin="968,90,0,0" Grid.Row="2" VerticalAlignment="Top" Height="106" Width="168" AutomationProperties.Name="dsa" RenderTransformOrigin="0.473,0.473"/>
+        <TextBlock x:Name="kellolbl" HorizontalAlignment="Left" Margin="1297,190,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="124" Width="311" FontSize="48"/>
     </Grid>
 </Window>

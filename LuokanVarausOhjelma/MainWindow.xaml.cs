@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Data;
+using System.Windows.Threading;
 
 namespace LuokanVarausOhjelma
 {
@@ -56,6 +57,7 @@ namespace LuokanVarausOhjelma
 
             InitializeComponent();
             Get_Data_SQL();
+            StartKello();
             System.Timers.Timer timer = new System.Timers.Timer();
             timer.Interval = 20000;
             timer.Elapsed += timer_Elapsed;
@@ -791,8 +793,19 @@ namespace LuokanVarausOhjelma
             con.Close();
         }
 
-        
+        public void StartKello()
+        {
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Tick += tickevent;
+            timer.Start();
+        }
 
-       
+        private void tickevent(object sender, EventArgs e)
+        {
+            kellolbl.Text = DateTime.Now.ToString();
+
+        }
+
     }
 }
