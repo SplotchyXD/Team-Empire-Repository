@@ -52,6 +52,8 @@ namespace LuokanVarausOhjelma
 
         public MainWindow()
         {
+           
+
             InitializeComponent();
             Get_Data_SQL();
             System.Timers.Timer timer = new System.Timers.Timer();
@@ -67,6 +69,8 @@ namespace LuokanVarausOhjelma
                     MessageBox.Show("paska");
                 }));
             }
+
+           
         }
 
         private void Nappi_painettu(object sender, KeyEventArgs e)
@@ -90,6 +94,12 @@ namespace LuokanVarausOhjelma
                 cmd = new SqlCommand("UPDATE Luokat Set Is_Varattu=1 WHERE LuokkaNimi= 'Kaneli'", con);
                 KaneliCount++;
                 Kaneli.Fill = VarausBrush;
+
+
+
+                //Näyttää toisen windowin
+                Class_nappi_näkymä win2 = new Class_nappi_näkymä();
+                win2.Show();
             }
             else if (e.Key == Key.Enter && KaneliCount == 1)
             {
@@ -365,6 +375,8 @@ namespace LuokanVarausOhjelma
             cmd.ExecuteNonQuery();
             con.Close();
         }
+
+     
 
         public void Get_Data_SQL()
         {
@@ -777,6 +789,10 @@ namespace LuokanVarausOhjelma
                 Oiva.Fill = VapaaBrush;
             }
             con.Close();
-        }            
+        }
+
+        
+
+       
     }
 }
