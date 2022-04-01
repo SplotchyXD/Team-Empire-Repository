@@ -18,9 +18,6 @@ using System.Data;
 
 namespace LuokanVarausOhjelma
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public SqlConnection con;
@@ -57,117 +54,50 @@ namespace LuokanVarausOhjelma
         {
             InitializeComponent();
             Get_Data_SQL();
-
             System.Timers.Timer timer = new System.Timers.Timer();
-
-
-
-
             timer.Interval = 20000;
             timer.Elapsed += timer_Elapsed;
             timer.Start();
 
-
             void timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
             {
-
-
-
-
-
-                //fill the DataTable or source collection from the database here...
                 Dispatcher.BeginInvoke(new Action(() =>
-                {
-
-                    
-                    /* SqlConnection connection = new SqlConnection(@"Data Source = teamempiresrv.database.windows.net; Initial Catalog = LuokkaVaraus; Persist Security Info = True; User ID = Empire; Password = Nice1234");
-                     connection.Open();
-
-                     string Get_Data = "SELECT * FROM Luokat";
-
-                     SqlCommand cmd = connection.CreateCommand();
-                     cmd.CommandText = Get_Data;
-
-                     SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                     DataTable dt = new DataTable("Luokat");
-                     sda.Fill(dt);*/
-
-                   // Grid_luokat.DataContext = dt.DefaultView
-                    
-                  
+                {                    
                     Get_Data_SQL();
                     MessageBox.Show("paska");
-
-
                 }));
             }
-
-
         }
-
-            
-        
 
         private void Fakta_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("XD TOIMII LOL");
         }
 
-        /*private void Kaneli_Click(object sender, RoutedEventArgs e)
-        {
-
-            con = new SqlConnection(@"Data Source = teamempiresrv.database.windows.net; Initial Catalog = LuokkaVaraus; Persist Security Info = True; User ID = Empire; Password = Nice1234");
-            con.Open();
-            if (KaneliCount == 0)
-            {
-                //cmd = new SqlCommand("UPDATE Luokat SET Is_Varattu=1 WHERE LuokkaId=6", con);
-                cmd = new SqlCommand ("UPDATE Luokat Set Is_Varattu=1 WHERE LuokkaNimi= 'Kaneli'", con);
-                KaneliCount++;
-                Kaneli.Fill = VarausBrush;
-            }else
-            {
-                //cmd = new SqlCommand("UPDATE Luokat SET Is_Varattu=0 WHERE LuokkaId=6", con);
-                cmd = new SqlCommand("UPDATE Luokat Set Is_Varattu=0 WHERE LuokkaNimi= 'Kaneli'", con);
-                KaneliCount--;
-                Kaneli.Fill = VapaaBrush;
-            }
-            cmd.ExecuteNonQuery();
-            con.Close();
-        }*/
-
-
         private void Nappi_painettu(object sender, KeyEventArgs e)
         {
             con = new SqlConnection(@"Data Source = teamempiresrv.database.windows.net; Initial Catalog = LuokkaVaraus; Persist Security Info = True; User ID = Empire; Password = Nice1234");
             con.Open();
-            /*if (e.Key != Key.Space && e.Key != Key.Enter)
-            {
-                MessageBox.Show("unassigned button pressed");
-            }*/
             if (e.Key == Key.Space && BittiCount == 0)
             {
-                //cmd = new SqlCommand("UPDATE Luokat SET Is_Varattu=1 WHERE LuokkaId=6", con);
                 cmd = new SqlCommand("UPDATE Luokat Set Is_Varattu=1 WHERE LuokkaNimi= 'Bitti'", con);
                 BittiCount++;
                 Bitti.Fill = VarausBrush;
             }
             else if (e.Key == Key.Space && BittiCount == 1)
             {
-                //cmd = new SqlCommand("UPDATE Luokat SET Is_Varattu=0 WHERE LuokkaId=6", con);
                 cmd = new SqlCommand("UPDATE Luokat Set Is_Varattu=0 WHERE LuokkaNimi= 'Bitti'", con);
                 BittiCount--;
                 Bitti.Fill = VapaaBrush;
             }
             else if (e.Key == Key.Enter && KaneliCount == 0)
             {
-                //cmd = new SqlCommand("UPDATE Luokat SET Is_Varattu=0 WHERE LuokkaId=6", con);
                 cmd = new SqlCommand("UPDATE Luokat Set Is_Varattu=1 WHERE LuokkaNimi= 'Kaneli'", con);
                 KaneliCount++;
                 Kaneli.Fill = VarausBrush;
             }
             else if (e.Key == Key.Enter && KaneliCount == 1)
             {
-                //cmd = new SqlCommand("UPDATE Luokat SET Is_Varattu=0 WHERE LuokkaId=6", con);
                 cmd = new SqlCommand("UPDATE Luokat Set Is_Varattu=0 WHERE LuokkaNimi= 'Kaneli'", con);
                 KaneliCount--;
                 Kaneli.Fill = VapaaBrush;
