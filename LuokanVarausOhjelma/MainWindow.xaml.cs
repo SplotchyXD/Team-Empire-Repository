@@ -68,7 +68,7 @@ namespace LuokanVarausOhjelma
                 Dispatcher.BeginInvoke(new Action(() =>
                 {                    
                     Get_Data_SQL();
-                    MessageBox.Show("paska");
+                    MessageBox.Show("Toimii");
                 }));
             }
 
