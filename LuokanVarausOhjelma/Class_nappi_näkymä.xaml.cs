@@ -30,8 +30,11 @@ namespace LuokanVarausOhjelma
 
         public int Varaus = 0;
 
+        SolidColorBrush VarausBrush = new SolidColorBrush(Colors.Red);
+        SolidColorBrush VapaaBrush = new SolidColorBrush(Colors.Green);
 
-       
+
+
 
         public Class_nappi_näkymä()
         {
@@ -49,12 +52,23 @@ namespace LuokanVarausOhjelma
             {
                 cmd = new SqlCommand("UPDATE Luokat Set Is_Varattu=1 WHERE LuokkaNimi= 'Bitti'", con);
                 Varaus++;
-                
+               Varattu_rct.Fill = VarausBrush;
+
+
+                Varaus_nappi.Content = "Vapauta";
+
             }
             else if (Varaus == 1)
             {
                 cmd = new SqlCommand("UPDATE Luokat Set Is_Varattu=0 WHERE LuokkaNimi= 'Bitti'", con);
                 Varaus--;
+
+               Varattu_rct.Fill = VapaaBrush;
+
+                Varaus_nappi.Content = "Varaa";
+              
+
+
               
             }
 
