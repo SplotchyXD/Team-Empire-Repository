@@ -76,11 +76,10 @@ namespace LuokanVarausOhjelma
             void timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
             {
                 Dispatcher.BeginInvoke(new Action(() =>
-                {                    
+                {
                     Get_Data_SQL();
-                    MessageBox.Show("Toimii");
                 }));
-            }   
+            }
         }
 
         private void Nappi_painettu(object sender, KeyEventArgs e)
@@ -110,12 +109,6 @@ namespace LuokanVarausOhjelma
                 cmd = new SqlCommand("UPDATE Luokat Set Is_Varattu=1 WHERE LuokkaNimi= 'Kaneli'", con);
                 KaneliCount++;
                 Kaneli.Fill = VarausBrush;
-
-
-
-                //Näyttää toisen windowin
-                Class_nappi_näkymä win2 = new Class_nappi_näkymä();
-                win2.Show();
             }
             else if (e.Key == Key.Enter && KaneliCount == 1)
             {

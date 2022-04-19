@@ -7,6 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\Kellari.png" />
+    <None Remove="Images\kerros3.png" />
     <None Remove="Images\Kerross2.jpg" />
     <None Remove="Images\LuokkaKarttaK2v2.png" />
   </ItemGroup>
@@ -16,6 +18,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\Kellari.png" />
+    <Resource Include="Images\kerros3.png" />
     <Resource Include="Images\Kerross2.jpg" />
     <Resource Include="Images\LuokkaKarttaK2v2.png" />
   </ItemGroup>

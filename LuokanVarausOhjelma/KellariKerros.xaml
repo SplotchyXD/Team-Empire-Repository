@@ -1,0 +1,20 @@
+﻿<Window x:Class="LuokanVarausOhjelma.KellariKerros"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LuokanVarausOhjelma"
+        mc:Ignorable="d"
+        Title="KellariKerros" Height="1080" Width="1920"
+        KeyDown="Nappi_painettu"
+        WindowStyle="None"
+        WindowState="Maximized" >
+    <Grid>
+        <Image HorizontalAlignment="Center" Height="1080" VerticalAlignment="Top" Width="1920" Source="Images/Kellari.png" Margin="0,10,0,0"/>
+        <Rectangle x:Name="Pelastus" Fill="Green" HorizontalAlignment="Left" Height="28" Margin="1004,92,0,0" Stroke="Black" VerticalAlignment="Top" Width="28" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.7"/>
+        <Rectangle x:Name="Siivo" Fill="Green" HorizontalAlignment="Left" Height="28" Margin="834,435,0,0" Stroke="Black" VerticalAlignment="Top" Width="28" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.7"/>
+        <Rectangle x:Name="Virta" Fill="Green" HorizontalAlignment="Left" Height="28" Margin="684,435,0,0" Stroke="Black" VerticalAlignment="Top" Width="28" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.7"/>
+        <Rectangle x:Name="Teho" Fill="Green" HorizontalAlignment="Left" Height="28" Margin="684,914,0,0" Stroke="Black" VerticalAlignment="Top" Width="28" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.7"/>
+        <TextBlock x:Name="kellolbl" HorizontalAlignment="Left" Margin="1264,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="149" Width="294" FontSize="48"/>
+    </Grid>
+</Window>
