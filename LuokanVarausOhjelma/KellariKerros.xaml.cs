@@ -217,5 +217,16 @@ namespace LuokanVarausOhjelma
             //asetetaan teksti elementtin teksti kellon ajaksi 
             kellolbl.Text = DateTime.Now.ToString();
         }
+
+        // Buttoni kerroksen näkymä vaihtelulle
+        private void TokaKerros_btn_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow MainWindow = new MainWindow();
+            MainWindow.ShowDialog();
+
+            //Actions
+
+            MainWindow.Close();
+        }
     }
 }

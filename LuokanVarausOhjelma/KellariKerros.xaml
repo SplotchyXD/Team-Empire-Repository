@@ -16,5 +16,6 @@
         <Rectangle x:Name="Virta" Fill="Green" HorizontalAlignment="Left" Height="28" Margin="684,435,0,0" Stroke="Black" VerticalAlignment="Top" Width="28" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.7"/>
         <Rectangle x:Name="Teho" Fill="Green" HorizontalAlignment="Left" Height="28" Margin="684,914,0,0" Stroke="Black" VerticalAlignment="Top" Width="28" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.7"/>
         <TextBlock x:Name="kellolbl" HorizontalAlignment="Left" Margin="1264,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="149" Width="294" FontSize="48"/>
+        <Button x:Name="TokaKerros_btn" Content="Toka kerros" HorizontalAlignment="Left" Margin="1554,405,0,0" VerticalAlignment="Top" Height="50" Width="156" FontSize="24" Click="TokaKerros_btn_Click"/>
     </Grid>
 </Window>

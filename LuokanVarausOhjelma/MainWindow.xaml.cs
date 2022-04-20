@@ -827,5 +827,21 @@ namespace LuokanVarausOhjelma
             kellolbl.Text = DateTime.Now.ToString();
         }
 
+
+        // Buttonit kerroksen näkymä vaihtelulle
+        private void KolmasKerros_btn_Click(object sender, RoutedEventArgs e)
+        {
+            KolmasKerros KolmasKerros = new KolmasKerros();
+            KolmasKerros.ShowDialog();
+
+            //Actions
+
+            KolmasKerros.Close();
+        }
+
+        private void KellariKerros_btn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -81,9 +81,11 @@
         <Rectangle x:Name="Visio" Fill="Green" HorizontalAlignment="Left" Height="28" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="28" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55" Margin="614,242,0,0"/>
         <Rectangle x:Name="Virna" Fill="Green" HorizontalAlignment="Left" Height="28" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="28" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55" Margin="536,4,0,0"/>
         <Rectangle x:Name="StudyO" Fill="Green"  HorizontalAlignment="Left" Height="28" Margin="646,108,0,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="28" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55"/>
-        <Rectangle x:Name="DigiLuola" Fill="Green" HorizontalAlignment="Left" Height="28" Margin="914,261,0,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="28" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55"/>
+        <Rectangle x:Name="DigiLuola" Fill="Green" HorizontalAlignment="Left" Height="17" Margin="936,323,0,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="18" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55"/>
         <Rectangle x:Name="Toimi" Fill="Green" HorizontalAlignment="Left" Height="28" Grid.Row="2" Stroke="Black" VerticalAlignment="Bottom" Width="28" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.55" Margin="865,0,0,528"/>
         <Button x:Name="Kaneli1" Content="Kaneli" HorizontalAlignment="Left" Margin="968,90,0,0" Grid.Row="2" VerticalAlignment="Top" Height="106" Width="168" AutomationProperties.Name="dsa" RenderTransformOrigin="0.473,0.473"/>
         <TextBlock x:Name="kellolbl" HorizontalAlignment="Left" Margin="1297,190,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="124" Width="311" FontSize="48"/>
+        <Button x:Name="KolmasKerros_btn" Content="Kolmas kerros" Grid.Column="1" HorizontalAlignment="Left" Margin="224,10,0,0" Grid.Row="2" VerticalAlignment="Top" Height="41" Width="159" FontSize="24" Click="KolmasKerros_btn_Click"/>
+        <Button x:Name="KellariKerros_btn" Content="Kellari" Grid.Column="1" HorizontalAlignment="Left" Margin="224,86,0,0" Grid.Row="2" VerticalAlignment="Top" Height="40" Width="159" FontSize="24" Click="KellariKerros_btn_Click"/>
     </Grid>
 </Window>
