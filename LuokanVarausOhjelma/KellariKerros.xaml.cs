@@ -61,7 +61,7 @@ namespace LuokanVarausOhjelma
             }
         }
 
-        private void Nappi_painettu(object sender, KeyEventArgs e)
+        /*private void Nappi_painettu(object sender, KeyEventArgs e)
         {
             //Tämän methodin ideana on ottaa kaikista luokista varaus inputit(eli napin painallukset) ja sen mukaan asettaa varaukset ja vapautukset
             //methodin alussa kerrotaan mihin tietokantaan yhteys avataaan
@@ -119,7 +119,8 @@ namespace LuokanVarausOhjelma
                 TehoCount--;
                 Teho.Fill = VapaaBrush;
             }
-        }
+        }*/
+
         void Get_Data_SQL()
         {
             SqlDataReader rdr = null;
