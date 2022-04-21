@@ -43,26 +43,22 @@ namespace ToinenNakyma
             con.Open();
             if (Varaus == 0)
             {
-                cmd = new SqlCommand("UPDATE Luokat Set Is_Varattu=1 WHERE LuokkaNimi= 'Bitti'", con);
+                cmd = new SqlCommand("UPDATE Luokat Set Is_Varattu=1 WHERE LuokkaNimi= 'Oiva'", con);
                 Varaus++;
                 Varattu_rct.Fill = VarausBrush;
 
-
+                VarausSts_Txtblk.Text = "Varattu";
                 Varaus_nappi.Content = "Vapauta";
-
             }
             else if (Varaus == 1)
             {
-                cmd = new SqlCommand("UPDATE Luokat Set Is_Varattu=0 WHERE LuokkaNimi= 'Bitti'", con);
+                cmd = new SqlCommand("UPDATE Luokat Set Is_Varattu=0 WHERE LuokkaNimi= 'Oiva'", con);
                 Varaus--;
 
                 Varattu_rct.Fill = VapaaBrush;
 
+                VarausSts_Txtblk.Text = "Vapaa";
                 Varaus_nappi.Content = "Varaa";
-
-
-
-
             }
 
             cmd.ExecuteNonQuery();
