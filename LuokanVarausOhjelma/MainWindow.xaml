@@ -9,7 +9,7 @@
         KeyDown="Nappi_painettu"
         WindowStyle="None"
         WindowState="Maximized" >
-    <Grid x:Name="Grid_luokat" RenderTransformOrigin="0.499,0.502" Margin="0,-2,0,2" IsEnabled="False">
+    <Grid x:Name="Grid_luokat" RenderTransformOrigin="0.499,0.502" Margin="0,-2,0,2" IsEnabled="True">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="730*"/>
             <ColumnDefinition Width="223*"/>
