@@ -281,5 +281,13 @@ namespace LuokanVarausOhjelma
             //asetetaan teksti elementtin teksti kellon ajaksi 
             kellolbl.Text = DateTime.Now.ToString();
         }
+
+        private void TokaKerros1_btn_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow MainWindow = new MainWindow();
+            MainWindow.ShowDialog();
+
+            MainWindow.Close();
+        }
     }
 }

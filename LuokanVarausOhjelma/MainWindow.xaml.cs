@@ -834,14 +834,15 @@ namespace LuokanVarausOhjelma
             KolmasKerros KolmasKerros = new KolmasKerros();
             KolmasKerros.ShowDialog();
 
-            //Actions
-
             KolmasKerros.Close();
         }
 
         private void KellariKerros_btn_Click(object sender, RoutedEventArgs e)
         {
+            KellariKerros KellariKerros = new KellariKerros();
+            KellariKerros.ShowDialog();
 
+            KellariKerros.Close();
         }
     }
 }

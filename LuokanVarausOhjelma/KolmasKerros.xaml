@@ -19,6 +19,7 @@
         <Rectangle x:Name="PäivienKimallus" Fill="Green" HorizontalAlignment="Left" Height="28" Margin="436,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="28" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.7"/>
         <Rectangle x:Name="KaupunginValot" Fill="Green" HorizontalAlignment="Left" Height="28" Margin="260,417,0,0" Stroke="Black" VerticalAlignment="Top" Width="28" RadiusY="90" RadiusX="90" StrokeThickness="2" Opacity="0.7"/>
         <TextBlock x:Name="kellolbl" HorizontalAlignment="Left" Margin="1118,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="174" Width="310" FontSize="48"/>
+        <Button x:Name="TokaKerros1_btn" Content="Toka kerros" HorizontalAlignment="Left" Margin="1305,410,0,0" VerticalAlignment="Top" Height="42" Width="178" FontSize="24" Click="TokaKerros1_btn_Click"/>
 
     </Grid>
 </Window>

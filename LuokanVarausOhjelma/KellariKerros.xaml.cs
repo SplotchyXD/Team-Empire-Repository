@@ -224,8 +224,6 @@ namespace LuokanVarausOhjelma
             MainWindow MainWindow = new MainWindow();
             MainWindow.ShowDialog();
 
-            //Actions
-
             MainWindow.Close();
         }
     }
