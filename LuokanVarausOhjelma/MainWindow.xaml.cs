@@ -82,6 +82,7 @@ namespace LuokanVarausOhjelma
             }
         }
 
+        //jätin tämän projekttiin koska jos tulevaisuudessa halutaan lisätä toiminnallisuus jossa tarvitaan näppäimistön inputteja niin tätä voi käyttää
         /*private void Nappi_painettu(object sender, KeyEventArgs e)
         {
             //Tämän methodin ideana on ottaa kaikista luokista varaus inputit(eli napin painallukset) ja sen mukaan asettaa varaukset ja vapautukset
@@ -90,6 +91,7 @@ namespace LuokanVarausOhjelma
             //riippuen mitä nappia painetaan niin haetaan sen mukaan luokka ja katsotaan onko se varattu tai ei
             //jos luokka on varattu niin luokka asetetaan vapaaksi ja jos se on vapaana niin se asetetaan varatuksi
             //jokainen komento on sama jokaiselle luokalle ainoa ero on se että jos luokka on varattu niin se asetetaan vapaksi eli 0 ja jos se on varattu niin tilan numeroksi tulee 1
+
             con = new SqlConnection(@"Data Source = teamempiresrv.database.windows.net; Initial Catalog = LuokkaVaraus; Persist Security Info = True; User ID = Empire; Password = Nice1234");
             con.Open();
             if (e.Key == Key.Space && BittiCount == 0)
