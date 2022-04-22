@@ -64,7 +64,7 @@ namespace LuokanVarausOhjelma
             }
         }
 
-        private void Nappi_painettu(object sender, KeyEventArgs e)
+        /*private void Nappi_painettu(object sender, KeyEventArgs e)
         {
             //Tämän methodin ideana on ottaa kaikista luokista varaus inputit(eli napin painallukset) ja sen mukaan asettaa varaukset ja vapautukset
             //methodin alussa kerrotaan mihin tietokantaan yhteys avataaan
@@ -150,7 +150,7 @@ namespace LuokanVarausOhjelma
             //ja sen jälkeen yhteys suljetaan((yhteyksen sulkeminen on sitä varten että kukaan jolla on tietoa sql:stä ei voi suorittaa SQL Injectionia ja päästä käsiksi tietokantaan))
             cmd.ExecuteNonQuery();
             con.Close();
-        }
+        }*/
 
         public void Get_Data_SQL()
         {
