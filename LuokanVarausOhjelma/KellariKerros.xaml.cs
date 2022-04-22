@@ -218,13 +218,21 @@ namespace LuokanVarausOhjelma
             kellolbl.Text = DateTime.Now.ToString();
         }
 
-        // Buttoni kerroksen näkymä vaihtelulle
+        // Buttonit kerroksen näkymä vaihtelulle
         private void TokaKerros_btn_Click(object sender, RoutedEventArgs e)
         {
             MainWindow MainWindow = new MainWindow();
             MainWindow.ShowDialog();
 
             MainWindow.Close();
+        }
+
+        private void KolmasKerros1_btn_Click(object sender, RoutedEventArgs e)
+        {
+            KolmasKerros KolmasKerros = new KolmasKerros();
+            KolmasKerros.ShowDialog();
+
+            KolmasKerros.Close();
         }
     }
 }
