@@ -6,7 +6,6 @@
         xmlns:local="clr-namespace:LuokanVarausOhjelma"
         mc:Ignorable="d"
         Title="MainWindow" Height="1075.5" Width="1920"
-        KeyDown="Nappi_painettu"
         WindowStyle="None"
         WindowState="Maximized" >
     <Grid x:Name="Grid_luokat" RenderTransformOrigin="0.499,0.502" Margin="0,-2,0,2" IsEnabled="True">

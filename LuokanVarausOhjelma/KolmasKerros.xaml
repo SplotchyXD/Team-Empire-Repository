@@ -6,7 +6,6 @@
         xmlns:local="clr-namespace:LuokanVarausOhjelma"
         mc:Ignorable="d"
         Title="KolmasKerros" Height="1082" Width="1948"        
-        KeyDown="Nappi_painettu"
         WindowStyle="None"
         WindowState="Maximized" >
 
