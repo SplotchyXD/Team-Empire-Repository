@@ -90,6 +90,10 @@ namespace ToinenNakyma
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             //avataan yhteys tietokantaan
+            //skripti katossoo onko varaus nappia painettu vai ei ja mikä luokka numero on tällä hetkellä käytöss
+            //luokat näytetään numeroina jotta neiitä voidaan käyttää if lausekkeissa booleanien kanssa
+            //jos luokka on varattu niin luokka asetetaan vapaaksi ja jos se on vapaana niin se asetetaan varatuksi
+            //jokainen komento on sama jokaiselle luokalle ainoa ero on se että jos luokka on varattu niin se asetetaan vapaksi eli 0 ja jos se on varattu niin tilan numeroksi tulee 1
             con = new SqlConnection(@"Data Source = teamempiresrv.database.windows.net; Initial Catalog = LuokkaVaraus; Persist Security Info = True; User ID = Empire; Password = Nice1234");
             con.Open();
             if (AmadeusCount == 0 && LuokkaNumero == 0)
@@ -763,10 +767,14 @@ namespace ToinenNakyma
             }
             cmd.ExecuteNonQuery();
             con.Close();
+            //komento suorittetaan
+            //ja yhteys suljetaan
         }
 
         private void Luokien_Vaihto()
         {
+            //riippuen mikä numero on niin luokkan nimi näytetään varaus näkymässä
+            //numero vaihtuu kun nappieja painetaan
             if(LuokkaNumero == 0)
             {
                 VaratttavaLuokkaTxt.Text = "Amadeus";
@@ -919,11 +927,13 @@ namespace ToinenNakyma
 
         private void LeftBtn_Click(object sender, RoutedEventArgs e)
         {
+            //vaihtaa luokkia
             LuokkaNumero--;
         }
 
         private void RightBtn_Click(object sender, RoutedEventArgs e)
         {
+            //vaihtaa luokkia
             LuokkaNumero++;
         }
 
@@ -1741,6 +1751,7 @@ namespace ToinenNakyma
 
         private void VaratttavaLuokkaTxt_TextChanged(object sender, TextChangedEventArgs e)
         {
+            //ainakun teksti vaihtuu niin tarkisteaan onko luokka johon teksti vaihtui varattu
             Get_Data_SQL();
         }
     }
