@@ -394,6 +394,7 @@ namespace LuokanVarausOhjelma
             //methodin alussa asetetaan SqlDataReader funktiolle rdr nimi ja se asetetaan null:iksi koskak un sitä kutsutaan niin sen pitää olla null
             //ja kuten Nappi_painettu methodissa niin kerrotaan mihin tietokantaan ohjelma yhdistaa kun yhteytta avataan
             SqlDataReader rdr = null;
+            //tämä on tiimin oma sql addressi jos käytätte samalla taval tiedon hakua niin asettakaa oman sql servun addressi
             con = new SqlConnection(@"Data Source = teamempiresrv.database.windows.net; Initial Catalog = LuokkaVaraus; Persist Security Info = True; User ID = Empire; Password = Nice1234");
 
             //yhteys avataan
