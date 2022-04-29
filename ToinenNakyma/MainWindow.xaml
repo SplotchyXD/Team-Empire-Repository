@@ -10,6 +10,9 @@
         <Button x:Name="Varaus_nappi" Content="Varaa" HorizontalAlignment="Center" Height="159" Margin="0,58,0,0" VerticalAlignment="Top" Width="600" FontSize="50" Click="Button_Click"/>
         <Rectangle x:Name="Varattu_rct" HorizontalAlignment="Center" Height="57" Margin="0,311,0,0" Stroke="Black" VerticalAlignment="Top" Width="220"/>
         <TextBlock x:Name="VarausSts_Txtblk" HorizontalAlignment="Left" Margin="365,326,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="64" FontSize="16"/>
+        <Button x:Name="LeftBtn" Content="&lt;---" HorizontalAlignment="Left" Margin="10,389,0,0" VerticalAlignment="Top" Width="75" Click="LeftBtn_Click"/>
+        <Button x:Name="RightBtn" Content="--->" HorizontalAlignment="Left" Margin="106,389,0,0" VerticalAlignment="Top" Width="75" Click="RightBtn_Click"/>
+        <TextBox x:Name="VaratttavaLuokkaTxt" HorizontalAlignment="Left" Height="23" Margin="10,361,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextChanged="VaratttavaLuokkaTxt_TextChanged"/>
 
     </Grid>
 </Window>
