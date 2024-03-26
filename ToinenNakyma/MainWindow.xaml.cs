@@ -96,7 +96,7 @@ namespace ToinenNakyma
             //jokainen komento on sama jokaiselle luokalle ainoa ero on se että jos luokka on varattu niin se asetetaan vapaksi eli 0 ja jos se on varattu niin tilan numeroksi tulee 1
 
             //tämä on tiimin oma sql addressi jos käytätte samalla taval tiedon hakua niin asettakaa oman sql servun addressi
-            con = new SqlConnection(@"Data Source = teamempiresrv.database.windows.net; Initial Catalog = LuokkaVaraus; Persist Security Info = True; User ID = Empire; Password = Nice1234");
+            con = new SqlConnection(@"Data Source =; Initial Catalog =; Persist Security Info = True; User ID =; Password =);
             con.Open();
             if (AmadeusCount == 0 && LuokkaNumero == 0)
             {
